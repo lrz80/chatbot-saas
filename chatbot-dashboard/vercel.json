@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/voice-response/route.ts": {
-      "maxDuration": 60
-    }
-  }
-}
