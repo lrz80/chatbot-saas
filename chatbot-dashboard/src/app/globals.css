@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fuentes si estás usando Geist o similares, si no las tienes puedes omitir estas */
+@layer base {
+  :root {
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+  }
+}
+
+/* Fondo degradado oscuro + texto blanco */
+body {
+  background: linear-gradient(to bottom right, #0e0e2c, #1e1e3f);
+  color: white;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* Scrollbar (opcional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+@keyframes floating {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-floating {
+  animation: floating 3s ease-in-out infinite;
+}
+@keyframes avatarMotion {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  25% {
+    transform: translateY(-2px) scale(1.02) rotate(-0.3deg);
+  }
+  50% {
+    transform: translateY(1px) scale(1.01) rotate(0.2deg);
+  }
+  75% {
+    transform: translateY(-1px) scale(1.015) rotate(-0.2deg);
+  }
+}
+
+.animate-avatarMotion {
+  animation: avatarMotion 4s ease-in-out infinite;
+}
+.bg-hero-glow {
+  background: radial-gradient(circle at center, rgba(138,43,226,0.15), rgba(0,0,0,0.9));
+}
+

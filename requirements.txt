@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+requests
+pydantic
+twilio
+openai
+firebase-admin
+gspread
+python-dotenv
+python-multipart
